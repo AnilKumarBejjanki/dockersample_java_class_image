@@ -1,0 +1,25 @@
+FROM alpine
+WORKDIR /root/hello-world
+COPY HelloWorld.java /root/hello-world
+
+RUN apk add openjdk8
+ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
+ENV PATH $PATH:$JAVA_HOME/bin
+
+RUN javac HelloWorld.java
+
+ENTRYPOINT java HelloWorld
+
+
+
+
+:wq to save file in git bash
+
+docker build .
+
+docker run 3f3ea56e3ff9
+
+output 
+#########################################3
+docker run 3f3ea56e3ff9
+first java app in docker
